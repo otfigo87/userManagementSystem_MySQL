@@ -39,9 +39,10 @@ pool.getConnection((err, connection) => {
 })
 
 // Router
-app.get('', (req, res) => {
-    res.render('home')
-});
+const routes = require('./server/routes/user'); // Path
+
+app.use('/', routes);
+
 
 
 
